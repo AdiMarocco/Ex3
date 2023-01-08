@@ -1,6 +1,6 @@
 #include "Ex3.h" 
 #include <stdio.h>
-#define N 6
+#define N 50
 
 void shift_element(int* arr, int i){
     while(i>0){
@@ -40,5 +40,5 @@ for (int i = 0; i < N-1; i++)
 {
     printf("%d,",arr[i]);
 }
-printf("%d,",arr[N-1]);
+printf("%d",arr[N-1]);
 return 0;}
