@@ -2,12 +2,14 @@
 #include <stdio.h>
 #define N 50
 
+//moving the elemnt one right
 void shift_element(int* arr, int i){
     while(i>0){
         *(arr +i) = *(arr + i-1);
         i--;
     }
 }
+
 void insertion_sort(int* arr , int len){
     for (int i=0;i<len;i++){
         int place = *(arr+i);

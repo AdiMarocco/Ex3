@@ -3,13 +3,14 @@
 //#include<Ex3.h>
 #include<stdio.h>
 #include <string.h>
-
+//get one line from the txt
 int get_line(char s[]){
     char k;
     int i=0;
     if (scanf("%c",&k) == EOF){
         return -1;
     }
+//loop - scan all the line, when it is end of line or file
 while (k!='\n'){
     s[i]=k;
     i++;
@@ -21,7 +22,7 @@ while (k!='\n'){
     s[i]='\0';  
 return i;}
 
-
+//check if str2 is substring of str1 - if so return 1
 int substring(char * str1, char * str2){
     for(int i=0;i<strlen(str1);i++){
         if(str1[i]==str2[0]){
@@ -42,6 +43,7 @@ int substring(char * str1, char * str2){
        }
     }
 return 0; }
+//print the lines and check if the word is is the line- if so print this line
 void print_lines(char * str){
         char oneline[LINE];
         int size = 0;
@@ -52,6 +54,7 @@ void print_lines(char * str){
         }
        }   
 }
+//scan one word from the txt
 int getword(char w[]){
     char k;
     int i=0;
@@ -66,7 +69,7 @@ while(k>=33&&k<=126){
     }
     w[i]='\0';  
 return i;}
-
+//check if s and t are equal or 
 int similar (char* s, char* t){
     if(strlen(s)>strlen(t)+1||strlen(s)<strlen(t)){
         return 0; }
@@ -96,7 +99,6 @@ void print_similar_words(char * str){
     char oneword[LINE];
         int size = 0;
        while (size>=0){
-        //check if can do getword(oneline)<0||getword(oneline)!=null
         size = getword(oneword);
         if(size!=-1 && similar(oneword,str)==1){
             printf("%s\n",oneword);
