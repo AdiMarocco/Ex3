@@ -1,4 +1,4 @@
-#include <Ex3.h> 
+#include "Ex3.h" 
 #include <stdio.h>
 #define N 6
 
@@ -28,7 +28,6 @@ void insertion_sort(int* arr , int len){
 
 int main (){
 int arr[N];
-int* check = arr+1;
 //shift_element(check,3);
 
 for(int i=0;i<N;i++){
@@ -37,9 +36,9 @@ for(int i=0;i<N;i++){
     arr[i]=num;
 }
 insertion_sort(arr,N);
-for (int i = 0; i < N; i++)
+for (int i = 0; i < N-1; i++)
 {
-    printf("%d,",arr[i] );
+    printf("%d,",arr[i]);
 }
-
+printf("%d,",arr[N-1]);
 return 0;}

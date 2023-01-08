@@ -15,7 +15,7 @@ isort.o: isort.c
 
 
 
-	.PHONY: all clean 
+.PHONY: all clean 
 
 clean:
-	rm -f *.o *.so *.a connections
+	rm -f *.o *.so *.a all
